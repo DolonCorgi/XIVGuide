@@ -1,0 +1,69 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+@font-face{
+    font-family: TrajanPro-Regular;
+    src: url(font/trajanPro/TrajanPro-Regular.ttf);
+}
+
+li.nav-item {
+  list-style-type: none;
+  align-items: center; /* Centre le texte verticalement */
+  border: 2px solid blue;
+}
+
+.nav-link {
+  align-items: center;
+  text-decoration: none; /* Supprime les soulignements des liens */
+}
+
+.vertical-nav {
+    flex-direction: column; /* Alignez les éléments verticalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    height: 95vh;
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    box-shadow: 3px 3px 10px rgba(192, 77, 77, 0.868);
+    transition: all 0.4s;
+    font-family: TrajanPro-Regular;
+    text-align: center;
+}
+
+  .page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+  }
+  
+  /* for toggle behavior */
+  
+  #sidebar.active {
+    margin-left: -15rem;
+  }
+  
+  #content.active {
+    width: 100%;
+    margin: 0;
+  }
+  
+  @media (max-width: 480px) {
+    #sidebar {
+      margin-left: -0rem;
+      min-width: 5rem;
+      width: 5rem;
+      height: 95vh;
+      max-width: 55rem; /* Limitez la largeur de la sidebar */
+      white-space: nowrap; /* Empêche le texte de passer à la ligne */
+      overflow: hidden; /* Cache tout contenu dépassant de la sidebar */
+      text-overflow: ellipsis; /* Affiche "..." s'il y a un débordement de texte */
+      font-size: 65%;
+      border: 2px solid red;
+    }
+  }

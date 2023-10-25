@@ -1,0 +1,46 @@
+@font-face{
+    font-family: TrajanPro-Regular;
+    src: url(src/font/trajanPro/TrajanPro-Regular.ttf);
+    font-family: eurostile;
+    src: url(src/font/eurostile/eurostile.TTF);
+}
+
+figcaption{
+    font-family: TrajanPro-Regular;
+}
+
+/* Ciblez l'élément avec la classe "throwback" à l'intérieur de l'élément ayant la classe "image-container" */
+.image-container.throwback {
+    position: relative; /* Vous pouvez ajouter ceci si nécessaire */
+}
+
+.image-container.throwback img {
+    z-index: 4;
+}
+
+/* Ciblez l'élément figcaption à l'intérieur de l'élément avec la classe "image-container" ayant la classe "throwback" */
+.image-container.throwback figcaption {
+    background: rgba(225, 225, 225, 0.8);
+    bottom: 0;
+    box-sizing: border-box;
+    position: static;
+    width: 100%;
+    padding-left: 1rem; /* Padding à gauche */
+    padding-right: 1rem; /* Padding à droite */
+    overflow: hidden;
+    white-space: pre-line; /* Ajoute un retour à la ligne lorsque nécessaire */
+}
+
+.image-container.throwback figcaption {
+    margin-top: -18px;
+}
+
+@media screen and (max-width: 375px) {
+    figcaption{
+        font-size: 0.7rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+}

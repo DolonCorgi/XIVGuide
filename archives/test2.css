@@ -1,0 +1,59 @@
+@font-face {
+    font-family: TrajanPro-Regular;
+    src: url(font/trajanPro/TrajanPro-Regular.ttf);
+  }
+  
+  .vertical-nav {
+    min-width: 5rem;
+    width: 5rem;
+    height: 95vh;
+    max-width: 55rem; /* Limitez la largeur de la sidebar */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache tout contenu dépassant de la sidebar */
+    text-overflow: ellipsis; /* Affiche "..." s'il y a un débordement de texte */
+    font-size: 65%;
+    font-family: TrajanPro-Regular;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li.nav-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 480px) {
+    #sidebar {
+      margin-left: -0rem;
+    }
+  
+    #sidebar.active {
+      margin-left: 0;
+    }
+  
+    #content {
+      width: 20%;
+      margin: 0;
+    }
+  
+    .page-content {
+      max-width: calc(20% - 5rem); /* Ajustez la largeur de la sidebar en conséquence */
+      /* Autres styles pour la page-content */
+    }
+  
+    #content.active {
+      margin-left: 0rem;
+      width: calc(100% - 5rem); /* Ajustez la largeur du contenu en conséquence */
+    }
+  }

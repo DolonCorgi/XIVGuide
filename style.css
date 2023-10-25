@@ -1,0 +1,863 @@
+@font-face{
+    font-family: TrajanPro-Regular;
+    src: url(src/font/trajanPro/TrajanPro-Regular.ttf);
+    font-family: eurostile;
+    src: url(src/font/eurostile/eurostile.TTF);
+}
+
+html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex; /* Utilisez flexbox pour organiser la mise en page */
+  min-height:100%;
+  position:relative;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+.header {
+  position: static;
+  top: 0;
+  z-index: 5;
+}
+
+.header:hover{
+  border-color: rgb(94, 93, 93);
+  box-shadow: 7px 7px 15px rgba(84, 84, 84, 0.926);
+}
+
+.sidebar {
+  width: 20%; /* Réglez la largeur de la barre latérale à 20% */
+  background-color: #f1f1f1;
+  overflow: auto;
+  text-align: center;
+  position: sticky;
+  flex-grow:0;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.logo {
+  background-color: rgba(214, 66, 66, 0.926);
+  color: white;
+  height: 110px; /*Rends le logo plus constant au niveau de sa taille (pas trop petit, pas trop grand)*/
+}
+
+.sidebar a.logo:hover {
+  background-color: rgba(196, 34, 34, 0.868);  
+  box-shadow: 3px 3px 10px rgba(196, 34, 34, 0.868);
+}
+
+.sidebar a:hover:not(.active):not(.logo) {
+  background-color: #555;
+  color: white;
+}
+
+
+div.content {
+  flex: 1; /* Utilisez flex pour que le contenu occupe l'espace restant */
+  padding: 16px;
+  padding-top: 1%;
+  flex-grow: 3;
+  width: 70%;
+}
+
+/* Titre de Page */
+.alt-two h1 {
+  position: relative;
+  padding-top: 10px;
+  margin-top: 2%;
+  font-family: "Eurostile";
+  font-weight: 300;
+  font-size: 2em;
+  color: #080808;
+  text-align: center;
+}
+
+.alt-two h1::before,
+.alt-two h1::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background-color: #c50000;
+}
+
+.alt-two h1::before {
+  left: 50%;
+  margin-left: -30px;
+  bottom: 0;
+}
+
+.alt-two h1::after {
+  left: 50%;
+  margin-left: -30px;
+  top: 0;
+}
+
+.alt-two h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 3em;
+}
+
+.alt-two h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.alt-two h1 {
+  text-align: center;
+}
+
+.alt-two h1 span {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 3em;
+  padding-left: 0.25em;
+  color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
+}
+
+/* Lecteur spotify et barre de recherche */
+
+.header-spotify{
+  width: 45%;
+  margin-right: 5%;
+}
+
+.header-spotify:hover{
+  border-color: rgba(117, 83, 190, 0.926);
+  box-shadow: 7px 7px 15px rgba(96, 104, 216, 0.868);
+}
+
+.sticky {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+}
+
+button#toggle-sticky img{
+  height: 35px;
+}
+
+button#toggle-sticky{
+  border: none;
+  z-index: 2;
+}
+
+@media screen and (max-width: 860px){
+  .header-spotify {
+    display: none; /* Masque l'élément */
+  }
+}
+
+  #searchInput and search-addon {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.form-control.rounded::placeholder {
+  font-family: TrajanPro-Regular;
+  font-size: x-large;
+}
+
+input#searchInput.form-control.rounded {
+  font-family: TrajanPro-Regular;
+  font-size:x-large;
+}
+
+input#searchInput.form-control.rounded:hover {
+  border-color: rgba(214, 66, 66, 0.926);
+  box-shadow: 3px 3px 10px rgba(192, 77, 77, 0.868);
+}
+input#searchInput.form-control.rounded:focus {
+  border-color: rgba(214, 66, 66, 0.926);
+  box-shadow: 3px 3px 10px rgba(192, 77, 77, 0.868);
+}
+
+span#search-addon.input-group-text.border-0:hover {
+  border-color: rgba(214, 66, 66, 0.926);
+  box-shadow: 3px 3px 10px grey;
+}
+
+span#search-addon.input-group-text.border-0:focus {
+  border-color: rgba(214, 66, 66, 0.926);
+  box-shadow: 3px 3px 3px 10px grey;
+}
+
+@media screen and (min-width: 860px){
+  .input-group.rounded {
+    width: 45%;
+    margin-left: 5%;
+  }
+}
+.container2 {
+  display: flex; /* Utilisez flexbox pour placer les éléments côte à côte */
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%; /* Pour que l'image s'adapte à la largeur du conteneur */
+  height: auto; /* Pour que la hauteur s'ajuste automatiquement */
+}
+
+.footer {
+  font-family: TrajanPro-Regular;
+  font-size: x-large;
+}
+
+/* Ajoutez ces règles CSS pour limiter la largeur du texte sur les écrans de moins de 400px */
+@media screen and (max-width: 400px) {
+    .sidebar {
+      width: 25%;
+      position: sticky;
+      top: 0;
+      bottom:0;
+      max-height: 660px;
+      margin: 2%;
+      margin-top: 3%;
+      font-family: Trajan Pro;
+      font-size: 13px;
+      font-weight: bold;
+      box-shadow: 3px 3px 10px rgba(192, 77, 77, 0.868);
+    }
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+    .sidebar a :not(:active) {
+      margin-top: 10%;
+    }
+    .sidebar a.active {
+      text-align: center;
+      float: none;
+    }
+    .sidebar a.accueil {
+        display: flex; /* Limitez la largeur du texte */
+        font-size: 4vw;
+        justify-content: center;
+        margin-top: 20%;
+    }
+    .sidebar a.intro {
+        display: flex; /* Limitez la largeur du texte */
+        font-size: 2.8vw;
+        justify-content: center;
+        margin-top: 20%;
+    }
+    .sidebar a.child {
+        margin-top: -33%;
+        justify-content: center;
+        font-size: 2.5vw;
+    }
+    .sidebar a.child2 {
+        margin-top: -20%;
+        justify-content: center;
+        font-size: 2.5vw;
+    }
+    .sidebar a.intro2 {
+        display: flex; /* Limitez la largeur du texte */
+        font-size: 4.5vw;
+        justify-content: center;
+        margin-top: 15%;
+    }
+    .sidebar a.intro3 {
+        display: flex; /* Limitez la largeur du texte */
+        font-size: 3vw;
+        justify-content: center;
+        margin-top: -25%;
+    }
+  /* Header/Éléments du titre */
+    .header {
+        text-align: center;
+        margin: 2%;
+        margin-top: 4%;
+        background:  rgb(179, 179, 178);
+        color: white;
+        width: 115%;
+        margin-left: -9%;
+        font-family: eurostile;
+        font-weight: bold;
+        box-shadow: 3px 3px 10px rgba(128, 124, 124, 0.868);
+        position: sticky;
+    }
+    .xiv {
+      color:rgba(214, 66, 66, 0.926);
+      font-style: bolder;
+      font-size: 13vw;
+    }
+    .header h1 {
+        font-size: 10vw;
+    }
+    .header h2 {
+        font-size: 5vw;
+    }
+    .form-control.rounded::placeholder {
+      font-family: TrajanPro-Regular;
+      font-size:small;
+    }
+    
+
+/*Content */
+.content {
+  flex: 1;
+  padding: 16px;
+  padding-top: 1%;
+  padding-bottom: 60px; /* The height of the footer */
+  margin-bottom: 100px; /* Add margin to create space between content and footer */
+}
+
+  /*Footer */
+    .footer {
+      position:absolute;
+      font-size: 1em;
+      width: 70%;
+    }  
+}
+
+/* Ajoutez ces règles CSS pour limiter la largeur du texte sur les écrans de plus de 401px et de moins de 700px */
+@media screen and (min-width: 401px) and (max-width: 700px) {
+  .sidebar {
+    width: 25%;
+    position: sticky;
+    top: 0;
+    margin: 2%;
+    max-height: 770px;
+    margin-top: 2.2%;
+    margin-bottom: -12%;
+    font-family: Trajan Pro;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(192, 77, 77, 0.868);
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .sidebar a :not(:active) {
+    margin-top: 10%;
+  }
+  .sidebar a.logo {
+    text-align: center;
+    float: none;
+  }
+  .sidebar a.accueil {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 4.5vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.intro {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 2.5vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.child {
+      margin-top: -15%;
+      justify-content: center;
+      font-size: 2.5vw;
+  }
+  .sidebar a.child2 {
+      margin-top: -15%;
+      justify-content: center;
+      font-size: 2vw;
+  }
+  .sidebar a.intro2 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 3vw;
+      justify-content: center;
+      margin-top: 15%;
+  }
+  .sidebar a.intro3 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 3vw;
+      justify-content: center;
+      margin-top: -15%;
+  }
+
+  .sidebar a.profil {
+    display: flex; /* Limitez la largeur du texte */
+    font-size: 4.5vw;
+    justify-content: center;
+    margin-top: -5%;
+}
+/* Header/Logo Title */
+  .header {
+      text-align: center;
+      margin: 2%;
+      margin-top: 2%;
+      background:  rgb(179, 179, 178);
+      color: white;
+      width: 105%;
+      margin-left: -4%;
+      font-family: eurostile;
+      font-weight: bold;
+      box-shadow: 3px 3px 10px rgba(128, 124, 124, 0.868);
+      position: sticky;
+  }
+  .xiv {
+    color:rgba(214, 66, 66, 0.926);
+    font-style: bolder;
+    font-size: 8vw;
+  }
+  .header h1 {
+      font-size: 6vw;
+  }
+  .header h2 {
+      font-size: 3vw;
+  }
+  .header-spotify {
+    display:"" !important;
+}
+/*Content */
+.content {
+  flex: 1;
+  padding: 16px;
+  padding-top: 1%;
+  padding-bottom: 60px; /* The height of the footer */
+  margin-bottom: 100px; /* Add margin to create space between content and footer */
+}
+
+/*Footer */
+  .footer {
+    position:absolute;
+    font-size: 1em;
+    width: 60%;
+  }  
+}
+
+/*Écrans de plus de 701px et de moins de 1400px (1368 px = Surface Pro) de large */
+@media screen and (min-width: 701px) and (max-width: 1400px) {
+  .sidebar {
+    width: 25%;
+    position: sticky;
+    top: 0;
+    margin: 2%;
+    max-height: 770px;
+    margin-top: 2.2%;
+    margin-bottom: -12%;
+    font-family: Trajan Pro;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(192, 77, 77, 0.868);
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .sidebar a :not(:active) {
+    margin-top: 10%;
+  }
+  .sidebar a.active {
+    text-align: center;
+    float: none;
+  }
+  .sidebar a.accueil {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 4.5vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.intro {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 2.5vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.child {
+      margin-top: -15%;
+      justify-content: center;
+      font-size: 2.5vw;
+  }
+  .sidebar a.child2 {
+      margin-top: -15%;
+      justify-content: center;
+      font-size: 2vw;
+  }
+  .sidebar a.intro2 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 3vw;
+      justify-content: center;
+      margin-top: 15%;
+  }
+  .sidebar a.intro3 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 3vw;
+      justify-content: center;
+      margin-top: -15%;
+  }
+
+  .sidebar a.profil {
+    display: flex; /* Limitez la largeur du texte */
+    font-size: 4.5vw;
+    justify-content: center;
+    margin-top: -5%;
+}
+/* Header/Logo Title */
+  .header {
+      text-align: center;
+      margin: 2%;
+      margin-top: 2%;
+      background:  rgb(179, 179, 178);
+      color: white;
+      width: 105%;
+      margin-left: -4%;
+      font-family: eurostile;
+      font-weight: bold;
+      box-shadow: 3px 3px 10px rgba(128, 124, 124, 0.868);
+      position: sticky;
+  }
+  .xiv {
+    color:rgba(214, 66, 66, 0.926);
+    font-style: bolder;
+    font-size: 8vw;
+  }
+  .header h1 {
+      font-size: 6vw;
+  }
+  .header h2 {
+      font-size: 3vw;
+  }
+
+/*Content */
+.content {
+  flex: 1;
+  padding: 16px;
+  padding-top: 1%;
+  padding-bottom: 60px; /* The height of the footer */
+  margin-bottom: 100px; /* Add margin to create space between content and footer */
+}
+
+/*Footer */
+  .footer {
+    position:absolute;
+    font-size: 1em;
+    width: 60%;
+  }  
+}
+
+/*Écrans de plus de 1401px et de moins de 1920px (native 1080p) de large */
+@media screen and (min-width: 1401px){
+  .sidebar {
+    width: 10%;
+    position: sticky;
+    top: 0;
+    margin: 2%;
+    margin-top: 1%;
+    margin-bottom: -6%;
+    font-family: Trajan Pro;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(192, 77, 77, 0.868);
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .sidebar a :not(:active) {
+    margin-top: 10%;
+  }
+  .sidebar a.active {
+    text-align: center;
+    float: none;
+  }
+  .sidebar a.logo {
+    display: flex; /* Limitez la largeur du texte */
+    font-size: 2.5vw;
+    justify-content: center;
+}
+  .sidebar a.accueil {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 1.8vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.intro {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 1vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.child {
+      margin-top: -15%;
+      justify-content: center;
+      font-size: 0.8vw;
+  }
+  .sidebar a.child2 {
+      margin-top: -15%;
+      justify-content: center;
+      font-size: 0.8vw;
+  }
+  .sidebar a.intro2 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 1vw;
+      justify-content: center;
+      margin-top: 15%;
+  }
+  .sidebar a.intro3 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 1vw;
+      justify-content: center;
+      margin-top: -15%;
+  }
+
+  .sidebar a.profil {
+    display: flex; /* Limitez la largeur du texte */
+    font-size: 1.8vw;
+    justify-content: center;
+    margin-top: -5%;
+}
+/* Header/Logo Title */
+  .header {
+      text-align: center;
+      margin: 2%;
+      margin-top: 0%;
+      background:  rgb(179, 179, 178);
+      color: white;
+      width: 100%;
+      height: 15%;
+      max-height: 15%;
+      margin-left: 0%;
+      font-family: eurostile;
+      font-weight: bold;
+      box-shadow: 3px 3px 10px rgba(128, 124, 124, 0.868);
+      position: sticky;
+      opacity: 100%;
+      z-index: 1;
+  }
+  .xiv {
+    color:rgba(214, 66, 66, 0.926);
+    font-style: bolder;
+    font-size: 3vw;
+  }
+  .header h1 {
+      font-size: 2vw;
+  }
+  .header h2 {
+      font-size: 1vw;
+  }
+
+/*Content */
+.content {
+  flex: 1;
+  padding: 16px;
+  padding-top: 1%;
+  padding-bottom: 60px; /* The height of the footer */
+  margin-bottom: 100px; /* Add margin to create space between content and footer */
+}
+
+/*Footer */
+  .footer {
+    bottom: 0;
+    position:absolute;
+    font-size: 1vw;
+    width: 60%;
+    margin-left: 10%;
+  }  
+}
+
+/***TAILLES INHABITUELLES***/
+/*Écran de plus de 401px de large et de 600px de haut, et de moins de 700px de haut */
+@media screen and (min-width: 401px) and (min-height:600px) and (max-height: 700px) {
+  .sidebar {
+    max-height: 700px;
+  }
+}
+
+/*Écran de plus de 480px de large et de moins de 500px de haut */
+@media screen and (min-width: 480px) and (max-height: 500px) {
+  .sidebar {
+    max-height: 350px;
+  }
+}
+
+/*Écran de plus de 480px de large et de 600px de haut*/
+@media screen and (min-width: 480px) and (max-height: 600px) {
+  .sidebar {
+    max-height: 500px;
+  }
+}
+
+/*Écran de plus de 540px de large et de 600px de haut, et de moins de 730px de haut */
+@media screen and (min-width: 540px) and (min-height: 600px) and (max-height: 730px) {
+  .sidebar {
+    max-height: 600px;
+  }
+}
+
+/*Écran de plus de 750px et de 880px de haut */
+@media screen and (min-height: 750px) and (max-height: 880px) {
+  .sidebar {
+    max-height: 750px;
+  }
+}
+
+/*Écran de plus de 850px de haut, et de moins de 980px de haut */
+@media screen and (min-height: 850px) and (max-height: 980px) {
+  .sidebar {
+    max-height: 850px;
+  }
+}
+
+/*Écran de plus de 981px de haut, et de moins de 1080px de haut */
+@media screen and (min-height: 981px) and (max-height: 1080px) {
+  .sidebar {
+    max-height: 980px;
+  }
+}
+
+/*Écran de plus de 1081px de haut et de moins de 1180px de haut */
+@media screen and (min-height: 1081px) and (max-height: 1180px) {
+  .sidebar {
+    max-height: 1080px;
+  }
+}
+
+/*Écran de plus de 1181px de haut et de moins de 1280px de haut */
+@media screen and (min-height: 1181px) and (max-height: 1280px) {
+  .sidebar {
+    max-height: 1180px;
+  }
+}
+
+/*Écran de plus de 1281px de haut, et de moins de 2500px de haut (jusqu'à zoom 50%) */ 
+@media screen and (min-height: 1281px) and (max-height: 2500px) {
+  .sidebar {
+    max-height: 1280px;
+  }
+}
+
+/*Écran de plus de 1281px de haut, et de moins de 2500px de haut (jusqu'à zoom 50%) */ 
+@media screen and (min-width: 2300px) and (max-height: 2500px) {
+  .sidebar {
+    width: 9%;
+    max-height: 1580px;
+  }
+  .sidebar a.accueil {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 1.5vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.intro {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 0.9vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.child {
+      margin-top: -10%;
+      justify-content: center;
+      font-size: 0.8vw;
+  }
+  .sidebar a.child2 {
+      margin-top: -10%;
+      justify-content: center;
+      font-size: 0.6vw;
+  }
+  .sidebar a.intro2 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 1vw;
+      justify-content: center;
+      margin-top: 15%;
+  }
+  .sidebar a.intro3 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 0.7vw;
+      justify-content: center;
+      margin-top: -10%;
+  }
+  .sidebar a.profil {
+    display: flex; /* Limitez la largeur du texte */
+    font-size: 1.5vw;
+    justify-content: center;
+    margin-top: 5%;
+}
+}
+
+/*Écran de plus de 1281px de haut, et de moins de 2500px de haut (jusqu'à zoom 33%) */ 
+@media screen and (min-width: 2500px) and (min-height: 2500px) {
+  .sidebar {
+    width: 9%;
+    max-height: 1580px;
+  }
+  .sidebar a.accueil {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 1.5vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.intro {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 0.9vw;
+      justify-content: center;
+      margin-top: 20%;
+  }
+  .sidebar a.child {
+      margin-top: -10%;
+      justify-content: center;
+      font-size: 0.8vw;
+  }
+  .sidebar a.child2 {
+      margin-top: -10%;
+      justify-content: center;
+      font-size: 0.6vw;
+  }
+  .sidebar a.intro2 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 1vw;
+      justify-content: center;
+      margin-top: 15%;
+  }
+  .sidebar a.intro3 {
+      display: flex; /* Limitez la largeur du texte */
+      font-size: 0.7vw;
+      justify-content: center;
+      margin-top: -10%;
+  }
+  .sidebar a.profil {
+    display: flex; /* Limitez la largeur du texte */
+    font-size: 1.5vw;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+}
+/*Écran de plus de 1281px de haut, et de moins de 2500px de haut (jusqu'à zoom 33%) */ 
+@media screen and (min-width: 2500px) and (min-height: 3500px) {
+  .sidebar {
+    width: 9%;
+    max-height: 2280px;
+  }
+}
+
+@media screen and (min-width: 1600px) and (min-height: 900px) {
+  button#toggle-sticky{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 900px) {
+  button#toggle-sticky{
+    display: none;
+  }
+}
+
+
+
+
+

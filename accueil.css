@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+
+/*****CARDS BG*****/
+.gr-1 {
+    background-image: url("/src/img/FFXIV official art/Hydaelyn.png");
+}
+
+.gr-2 {
+    background-image: url("/src/img/FFXIV official art/sharlayan.png");
+}
+
+.gr-3 {
+    background-image: url("/src/img/FFXIV\ official\ art/endwalker.jpg");
+}
+
+.gr-4 {
+  background-image: url("/src/img/FFXIV\ official\ art/Delivery_mog_quest.png");
+}
+
+.gr-5 {
+  background-image: url("/src/img/FFXIV\ official\ art/free_trial.png");
+}
+
+.gr-1, .gr-2, .gr-3, .gr-4, .gr-5 {
+  background-size: cover;
+  background-position: center; /* Optionnel : Centre l'image horizontalement et verticalement */
+}
+
+/*****CARDS*****/
+* {
+  transition: 0.5s;
+}
+
+.h-100 {
+  height: 100vh !important;
+}
+
+.align-middle {
+  position: relative;
+}
+
+
+.column:hover {
+  padding-left: 0;
+}
+
+.card {
+  min-height: 280px;
+  max-height: 280px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.05rem;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 7px 7px 15px rgba(52, 52, 52, 0.926);
+}
+
+.card .txt {
+  margin-left: -0.5rem;
+  z-index: 1;
+}
+
+.card .txt2 {
+    margin-left: -0.5rem;
+    z-index: 1;
+  }
+
+.card .txt h1 {
+  font-weight: 450;
+  text-transform: uppercase;
+  color: rgb(47, 106, 244);
+}
+
+.card .txt p {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0rem;
+  margin-top: 33px;
+  opacity: 0;
+  color: rgba(255, 255, 255, 1);
+}
+
+.card .txt2 h1 {
+    font-weight: 450;
+    text-transform: uppercase;
+    color: rgb(98, 214, 75);
+  }
+  
+  .card .txt2 p {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0rem;
+    margin-top: 33px;
+    opacity: 0;
+    color: rgb(104, 232, 78);
+  }
+
+  .card .txt3 h1 {
+    font-weight: 450;
+    text-transform: uppercase;
+    color: rgb(34, 33, 33);
+  }
+
+  .card .txt3 p {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0rem;
+    margin-top: 33px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .card .txt4 h1 {
+    font-weight: 450;
+    text-transform: uppercase;
+    color: rgb(236, 132, 58);
+  }
+
+  .card .txt4 p {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0rem;
+    margin-top: 33px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .card .txt5 h1 {
+    font-weight: 450;
+    text-transform: uppercase;
+    color: rgb(222, 198, 19);
+  }
+
+  .card .txt5 p {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0rem;
+    margin-top: 33px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 1);
+  }
+
+.card a {
+  z-index: 3;
+  font-size: 1rem;
+  color: rgb(82, 78, 78);
+  margin-left: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.card.gr-4 a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.card a:after {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  width: 0;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  transition: 0.5s;
+}
+
+.card .ico-card {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.card i {
+  position: relative;
+  right: 0;
+  font-size: 12rem;
+  line-height: 0;
+  opacity: 0.2;
+  color: rgba(255, 255, 255, 1);
+  z-index: 0;
+}
+
+/*****CARDS HOVER*****/
+.column:hover .card .txt h1{
+  color:rgb(47, 106, 244);
+  opacity: 1;
+  text-shadow: -0.5px 0 rgb(0, 0, 0), 0 0.5px rgb(0, 0, 0), 0.5px 0 rgb(0, 0, 0), 0 -0.5px rgb(0, 0, 0);
+}
+
+.column:hover .card .txt p {
+  color: rgb(47, 106, 244);
+  opacity: 1;
+  text-shadow: -0.5px 0 rgb(0, 0, 0), 0 0.5px rgb(0, 0, 0), 0.5px 0 rgb(0, 0, 0), 0 -0.5px rgb(0, 0, 0);
+}
+
+.column:hover .card .txt2 h1{
+    color: rgb(98, 214, 75);
+    opacity: 1;
+    text-shadow: -0.5px 0 rgb(255, 255, 255), 0 0.5px rgb(255, 255, 255), 0.5px 0 rgb(255, 255, 255), 0 -0.5px rgb(255, 255, 255);
+}
+.column:hover .card .txt2 p {
+    color: rgb(98, 214, 75);
+    opacity: 1;
+    text-shadow: -1.2px 0 rgb(255, 255, 255), 0 1.2px rgb(255, 255, 255), 1.2px 0 rgb(255, 255, 255), 0 -1.2px rgb(255, 255, 255);
+}
+
+.column:hover .card .txt3 h1,
+.column:hover .card .txt3 p {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+  text-shadow: -1.2px 0 rgb(255, 255, 255), 0 1.2px rgb(255, 255, 255), 1.2px 0 rgb(255, 255, 255), 0 -1.2px rgb(255, 255, 255);
+}
+
+.column:hover .card .txt4 h1,
+.column:hover .card .txt4 p {
+  color: rgb(236, 132, 58);
+  opacity: 1;
+  text-shadow: -1.2px 0 rgb(255, 255, 255), 0 1.2px rgb(255, 255, 255), 1.2px 0 rgb(255, 255, 255), 0 -1.2px rgb(255, 255, 255);
+}
+
+.column:hover .card .txt5 h1,
+.column:hover .card .txt5 p {
+  color: rgb(222, 198, 19);
+  opacity: 1;
+  text-shadow: -1.2px 0 rgb(255, 255, 255), 0 1.2px rgb(255, 255, 255), 1.2px 0 rgb(255, 255, 255), 0 -1.2px rgb(255, 255, 255);
+}
+
+.column:hover a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.column:hover a:after {
+  width: 10%;
+}
+
+/*****MEDIA QUERIES*****/
+
+@media screen and (min-width: 1401px){
+  .card {
+    min-height: 280px;
+    max-height: 280px;
+  }
+
+  .card.gr-3 {
+    min-height: 500px;
+    max-width: 1200px;
+    margin-left: 2.8rem;
+}
+}
+
+@media screen and (max-width: 1399px) {
+  .card.gr-3 {
+    min-height: auto;
+    max-width: auto;
+}
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    min-height: 100px !important;
+    max-height: 200px !important;
+  }
+
+  .card p {
+    font-size: 0.7rem;
+  }
+}
+
