@@ -1,0 +1,239 @@
+@font-face{
+    font-family: TrajanPro-Regular;
+    src: url(src/font/trajanPro/TrajanPro-Regular.ttf);
+    font-family: eurostile;
+    src: url(src/font/eurostile/eurostile.TTF);
+}
+
+.container.h-100{
+    font-family: TrajanPro-Regular;
+}
+
+/* ACCORDEON GUIDES */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.guides.body {
+    line-height: 1.5;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light";
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+.guides h3 {
+    margin-left: -20px;
+    font-size: 1.2em;
+    line-height: 1.2;
+    font-family: eurostile;
+}
+
+.guides label {
+    display: block;
+    overflow: hidden;
+}
+
+.guides .title {
+    padding: 1em 3em;
+    position: relative;
+    z-index: 599;
+    background: #fbfbfb;
+    border-bottom: 1px solid #eee;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.guides .title:hover {
+    cursor: pointer;
+}
+
+.guides .title-1:hover {
+    background: #7cd45a;
+}
+
+.guides .title-2:hover {
+    background: #267dda;
+}
+
+.guides .title-3:hover {
+    background: #de463e;
+}
+
+.guides .title-4:hover {
+    background: #c571df;
+}
+
+.guides .title-5:hover {
+    background: #dda03d;
+}
+
+.guides .content {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    max-height: 0px;
+    border-bottom: 1px solid #eee;
+    -webkit-transition: max-height 0.3s linear;
+    -moz-transition: max-height 0.3s linear;
+    transition: max-height 0.3s linear;
+    width: 100% !important;
+    margin-bottom: 0px !important;
+}
+
+.guides .content p {
+    position: relative;
+    margin: 0 !important;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all 0.55s ease;
+    -moz-transition: all 0.55s ease;
+    transition: all 0.55s ease;
+}
+
+.guides .content p i {
+    font-size: 80%;
+}
+
+.guides .content img {
+    margin-top: 1px;
+}
+
+.guides input[type=checkbox] {
+    display: none;
+}
+
+.guides input#chk-1[type=checkbox]:checked + .title {
+    background: #7cd45a;
+}
+
+.guides input#chk-2[type=checkbox]:checked + .title {
+    background: #267dda;
+}
+
+.guides input#chk-3[type=checkbox]:checked + .title {
+    background: #de463e;
+}
+
+.guides input#chk-4[type=checkbox]:checked + .title {
+    background: #c571df;
+}
+
+.guides input#chk-5[type=checkbox]:checked + .title {
+    background: #dda03d;
+}
+
+.guides input[type=checkbox]:checked + .title + .content {
+    max-height: fit-content;
+}
+
+.guides input[type=checkbox]:checked + .title + .content p {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* BOUTON LIEN */
+a.lien {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+    font-family: TrajanPro-Regular;
+    font-size: var(--bs-nav-link-font-size);
+}
+
+a.lien::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;    
+    border-radius: 2px;
+    background-color: #7cd45a;
+    bottom: -3px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+a.lien:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    margin-top: 5px;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.lien-1 a.lien::before {
+    background-color: #7cd45a;
+}
+
+.lien-2 a.lien::before {
+    background-color: #267dda;
+}
+
+.lien-3 a.lien::before {
+    background-color: #de463e;
+}
+
+.lien-4 a.lien::before {
+    background-color: #c571df;
+}
+
+.lien-5 a.lien::before {
+    background-color: #dda03d;
+}
+
+
+/* SECTION TEXT*/
+.section {
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08);
+    background-color: #fbfbfb;
+    border-radius: 0.5rem;
+    border-left: 0 solid #ffffff;
+    transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+}
+
+.section p{
+    white-space: pre-line; /* Ajoute un retour à la ligne lorsque nécessaire */
+}
+
+.section-1:hover {
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid #7cd45a;
+}
+
+.section-2:hover {
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid #267dda;
+}
+
+.section-3:hover {
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid #de463e;
+}
+
+.section-4:hover {
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid #c571df;
+}
+
+.section-5:hover {
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid #dda03d;
+}

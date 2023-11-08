@@ -9,7 +9,6 @@ html{
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -17,13 +16,17 @@ body {
   min-height:100%;
   position:relative;
   align-items: flex-start;
-  overflow-x: hidden;
 }
 
 .header {
   position: static;
   top: 0;
   z-index: 5;
+  margin-left: 2%;
+}
+
+.header h2{
+  margin-left: 2%;
 }
 
 .header:hover{
@@ -38,6 +41,8 @@ body {
   text-align: center;
   position: sticky;
   flex-grow:0;
+  top: 0;
+  max-height: 100vh;
 }
 
 .sidebar a {
@@ -70,6 +75,7 @@ div.content {
   padding-top: 1%;
   flex-grow: 3;
   width: 70%;
+  overflow-x: hidden;
 }
 
 /* Titre de Page */
@@ -79,35 +85,33 @@ div.content {
   margin-top: 2%;
   font-family: "Eurostile";
   font-weight: 300;
-  font-size: 2em;
+  font-size: 2.2em;
   color: #080808;
-  text-align: center;
 }
 
 .alt-two h1::before,
 .alt-two h1::after {
   content: "";
   position: absolute;
-  width: 60px;
+  width: 80px;
   height: 1px;
   background-color: #c50000;
 }
 
 .alt-two h1::before {
-  left: 50%;
+  left: 60%;
   margin-left: -30px;
   bottom: 0;
 }
 
 .alt-two h1::after {
-  left: 50%;
+  left: 40%;
   margin-left: -30px;
   top: 0;
 }
 
 .alt-two h1 span {
   display: block;
-  font-size: 0.5em;
   line-height: 3em;
 }
 
@@ -121,14 +125,15 @@ div.content {
 }
 
 .alt-two h1 span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 4px;
-  line-height: 3em;
-  padding-left: 0.25em;
+  line-height: 1.5em;
+  padding-left: 0.20em;
   color: rgba(0, 0, 0, 0.4);
   padding-bottom: 10px;
+  white-space: pre-line;
 }
 
 /* Lecteur spotify et barre de recherche */
@@ -205,6 +210,13 @@ span#search-addon.input-group-text.border-0:focus {
     margin-left: 5%;
   }
 }
+
+/* Contenu */
+
+.container.h-100{
+  width: auto;
+  padding-left: 0 !important;
+}
 .container2 {
   display: flex; /* Utilisez flexbox pour placer les éléments côte à côte */
   justify-content: center;
@@ -227,9 +239,9 @@ span#search-addon.input-group-text.border-0:focus {
       position: sticky;
       top: 0;
       bottom:0;
-      max-height: 660px;
+      max-height: 750px;
       margin: 2%;
-      margin-top: 3%;
+      margin-top: 3.5%;
       font-family: Trajan Pro;
       font-size: 13px;
       font-weight: bold;
@@ -288,7 +300,7 @@ span#search-addon.input-group-text.border-0:focus {
         background:  rgb(179, 179, 178);
         color: white;
         width: 115%;
-        margin-left: -9%;
+        margin-left: -7%;
         font-family: eurostile;
         font-weight: bold;
         box-shadow: 3px 3px 10px rgba(128, 124, 124, 0.868);
@@ -322,8 +334,8 @@ span#search-addon.input-group-text.border-0:focus {
 
   /*Footer */
     .footer {
-      position:absolute;
-      font-size: 1em;
+      position:relative;
+      font-size: 0.8em;
       width: 70%;
     }  
 }
@@ -434,8 +446,8 @@ span#search-addon.input-group-text.border-0:focus {
 
 /*Footer */
   .footer {
-    position:absolute;
-    font-size: 1em;
+    position:relative;
+    font-size: 0.8em;
     width: 60%;
   }  
 }
@@ -443,7 +455,7 @@ span#search-addon.input-group-text.border-0:focus {
 /*Écrans de plus de 701px et de moins de 1400px (1368 px = Surface Pro) de large */
 @media screen and (min-width: 701px) and (max-width: 1400px) {
   .sidebar {
-    width: 25%;
+    width: 22%;
     position: sticky;
     top: 0;
     margin: 2%;
@@ -553,7 +565,7 @@ span#search-addon.input-group-text.border-0:focus {
 /*Écrans de plus de 1401px et de moins de 1920px (native 1080p) de large */
 @media screen and (min-width: 1401px){
   .sidebar {
-    width: 10%;
+    width: 9%;
     position: sticky;
     top: 0;
     margin: 2%;
@@ -656,6 +668,7 @@ span#search-addon.input-group-text.border-0:focus {
   flex: 1;
   padding: 16px;
   padding-top: 1%;
+  margin-right: -5%;
   padding-bottom: 60px; /* The height of the footer */
   margin-bottom: 100px; /* Add margin to create space between content and footer */
 }
@@ -666,7 +679,6 @@ span#search-addon.input-group-text.border-0:focus {
     position:absolute;
     font-size: 1vw;
     width: 60%;
-    margin-left: 10%;
   }  
 }
 
@@ -699,31 +711,17 @@ span#search-addon.input-group-text.border-0:focus {
   }
 }
 
-/*Écran de plus de 750px et de 880px de haut */
-@media screen and (min-height: 750px) and (max-height: 880px) {
-  .sidebar {
-    max-height: 750px;
-  }
-}
-
-/*Écran de plus de 850px de haut, et de moins de 980px de haut */
-@media screen and (min-height: 850px) and (max-height: 980px) {
+/*Écran de plus de 1081px de haut et de moins de 1180px de haut */
+@media screen and (min-height: 600px) and (max-height: 1180px) {
   .sidebar {
     max-height: 850px;
   }
 }
 
-/*Écran de plus de 981px de haut, et de moins de 1080px de haut */
-@media screen and (min-height: 981px) and (max-height: 1080px) {
+/*Écran de plus de 1000px de haut et de moins de 1180px de haut */
+@media screen and (min-height: 1000px) and (max-height: 1180px) {
   .sidebar {
-    max-height: 980px;
-  }
-}
-
-/*Écran de plus de 1081px de haut et de moins de 1180px de haut */
-@media screen and (min-height: 1081px) and (max-height: 1180px) {
-  .sidebar {
-    max-height: 1080px;
+    max-height: 950px;
   }
 }
 
@@ -837,6 +835,7 @@ span#search-addon.input-group-text.border-0:focus {
 }
 
 }
+
 /*Écran de plus de 1281px de haut, et de moins de 2500px de haut (jusqu'à zoom 33%) */ 
 @media screen and (min-width: 2500px) and (min-height: 3500px) {
   .sidebar {

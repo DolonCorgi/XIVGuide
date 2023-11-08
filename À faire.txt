@@ -1,5 +1,7 @@
+HTML: Rajouter les trailers dans les extensions
+
 CSS: 
-Changer la taille des textes dans la sidebar pour tout mettre pareil
+
 
 Javascript:
 Régler le bouton spotify et faire le trick de sticky à fixed pour la sidebar pour l'effet side bar qui disparaît

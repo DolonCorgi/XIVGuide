@@ -6,17 +6,185 @@
 }
 
 figcaption{
+    font-family: eurostile;
+}
+
+.content a:not(.footer a) {
+    color: rgba(188, 36, 36, 0.804) !important;
+}
+
+p{
     font-family: TrajanPro-Regular;
+    margin-top: 1rem !important;
+    white-space: pre-line;
+}
+
+/* Divider */
+.divider
+{
+	position: relative;
+	margin-top: 20px !important;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
 }
 
 /* Ciblez l'élément avec la classe "throwback" à l'intérieur de l'élément ayant la classe "image-container" */
 .image-container.throwback {
     position: relative; /* Vous pouvez ajouter ceci si nécessaire */
+    justify-items: center;
+}
+
+.image-container.throwback iframe {
+    z-index: 4;
 }
 
 .image-container.throwback img {
-    z-index: 4;
+    z-index: 4; 
 }
+
+.image-container.logo {
+    display: flex;
+    justify-content: center;
+}
+
+/* ACCORDEON EXTENSIONS */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.extension.body {
+    line-height: 1.5;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light";
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+.extension h3 {
+    margin-left: -20px;
+    font-size: 1.2em;
+    line-height: 1.2;
+    font-family: eurostile;
+}
+
+
+.extension label {
+    display: block;
+    overflow: hidden;
+}
+
+.extension .title {
+    padding: 1em 3em;
+    position: relative;
+    z-index: 599;
+    background: #fbfbfb;
+    border-bottom: 1px solid #eee;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.extension .title:hover {
+    cursor: pointer;
+}
+
+.extension .title-1:hover {
+    background: #5198db;
+}
+
+.extension .title-2:hover {
+    background: #da3226;
+}
+
+.extension .title-3:hover {
+    background: #8c3ede;
+}
+
+.extension .title-4:hover {
+    background: #dfd08f;
+}
+
+.extension .content {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    max-height: 0px;
+    border-bottom: 1px solid #eee;
+    -webkit-transition: max-height 0.3s linear;
+    -moz-transition: max-height 0.3s linear;
+    transition: max-height 0.3s linear;
+    width: 100% !important;
+    margin-bottom: 0px !important;
+}
+
+.extension .content p {
+    position: relative;
+    margin: 0 !important;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all 0.55s ease;
+    -moz-transition: all 0.55s ease;
+    transition: all 0.55s ease;
+}
+
+.extension .content p i{
+    font-size: 80%;
+}
+
+.entension .content img{
+    margin-top: 1px;
+}
+
+.extension input[type=checkbox] {
+    display: none;
+}
+
+.extension input#chk-1[type=checkbox]:checked + .title {
+    background: #5198db;
+}
+
+.extension input#chk-2[type=checkbox]:checked + .title {
+    background: #da3226;
+}
+
+.extension input#chk-3[type=checkbox]:checked + .title {
+    background: #8c3ede;
+}
+
+.extension input#chk-4[type=checkbox]:checked + .title {
+    background: #dfd08f;
+}
+
+.extension input[type=checkbox]:checked + .title + .content {
+    max-height: fit-content;
+}
+
+.extension input[type=checkbox]:checked + .title + .content p {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+
 
 /* Ciblez l'élément figcaption à l'intérieur de l'élément avec la classe "image-container" ayant la classe "throwback" */
 .image-container.throwback figcaption {
@@ -35,6 +203,18 @@ figcaption{
     margin-top: -18px;
 }
 
+.row.align-middle.image-container p {
+    text-align: start;
+}
+
+.row.align-middle.image-container a {
+    padding-top: 20px !important; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media screen and (max-width: 375px) {
     figcaption{
         font-size: 0.7rem;
@@ -42,5 +222,17 @@ figcaption{
 
     p{
         font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    iframe{
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .extension .content iframe{
+        width: 100%;
     }
 }

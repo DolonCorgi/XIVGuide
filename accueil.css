@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@font-face{
+  font-family: TrajanPro-Regular;
+  src: url(src/font/trajanPro/TrajanPro-Regular.ttf);
+  font-family: eurostile;
+  src: url(src/font/eurostile/eurostile.TTF);
+}
 
+
+/*****CHANGELOG*****/
+.container {
+  font-family: TrajanPro-Regular;
+}
+
+.list-unstyled a {
+  color:rgb(204, 64, 64);
+}
 
 /*****CARDS BG*****/
 .gr-1 {
@@ -191,13 +206,13 @@
 .column:hover .card .txt h1{
   color:rgb(47, 106, 244);
   opacity: 1;
-  text-shadow: -0.5px 0 rgb(0, 0, 0), 0 0.5px rgb(0, 0, 0), 0.5px 0 rgb(0, 0, 0), 0 -0.5px rgb(0, 0, 0);
+  text-shadow: -1.2px 0 rgb(255, 255, 255), 0 1.2px rgb(255, 255, 255), 1.2px 0 rgb(255, 255, 255), 0 -1.2px rgb(255, 255, 255);
 }
 
 .column:hover .card .txt p {
   color: rgb(47, 106, 244);
   opacity: 1;
-  text-shadow: -0.5px 0 rgb(0, 0, 0), 0 0.5px rgb(0, 0, 0), 0.5px 0 rgb(0, 0, 0), 0 -0.5px rgb(0, 0, 0);
+  text-shadow: -1.2px 0 rgb(255, 255, 255), 0 1.2px rgb(255, 255, 255), 1.2px 0 rgb(255, 255, 255), 0 -1.2px rgb(255, 255, 255);
 }
 
 .column:hover .card .txt2 h1{
@@ -222,14 +237,14 @@
 .column:hover .card .txt4 p {
   color: rgb(236, 132, 58);
   opacity: 1;
-  text-shadow: -1.2px 0 rgb(255, 255, 255), 0 1.2px rgb(255, 255, 255), 1.2px 0 rgb(255, 255, 255), 0 -1.2px rgb(255, 255, 255);
+  text-shadow: -0.5px 0 rgb(0, 0, 0), 0 0.5px rgb(0, 0, 0), 0.5px 0 rgb(0, 0, 0), 0 -0.5px rgb(0, 0, 0);
 }
 
 .column:hover .card .txt5 h1,
 .column:hover .card .txt5 p {
   color: rgb(222, 198, 19);
   opacity: 1;
-  text-shadow: -1.2px 0 rgb(255, 255, 255), 0 1.2px rgb(255, 255, 255), 1.2px 0 rgb(255, 255, 255), 0 -1.2px rgb(255, 255, 255);
+  text-shadow: -0.5px 0 rgb(0, 0, 0), 0 0.5px rgb(0, 0, 0), 0.5px 0 rgb(0, 0, 0), 0 -0.5px rgb(0, 0, 0);
 }
 
 .column:hover a {

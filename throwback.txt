@@ -1,0 +1,13 @@
+    <div class="row align-middle">
+      <div class="image-container throwback" style="display: grid; justify-content: center;">
+        	
+        <figcaption>
+            Artwork présenté lors d'une diffusion en direct sur Twitch revenant sur les 10 ans de FFXIV -
+            © Square Enix
+        </figcaption>
+      </div>
+    </div>
+
+
+
+Envoyer l'image ARR à Cora pour avoir la même résolution que les autres
