@@ -1,100 +1,110 @@
 /// Rendre les changements JS selon la taille de l'élément possibles
 // Fonction pour gérer les changements de taille de l'élément HTML
 function handleHtmlResize() {
-    // Obtenez la largeur de l'élément HTML
+    // Obtenir la largeur de l'élément HTML
     const htmlWidth = document.documentElement.clientWidth;
 
-    // Sélectionnez l'élément CGU par son ID
+    // Sélectionner l'élément CGU par son ID
     let CGU = document.getElementById("CGU");
 
-    // Vérifiez la nouvelle largeur et changez le texte en conséquence
+    // Modification du contenu
     if (htmlWidth < 1000) {
         CGU.querySelector("a").textContent = "CGU";
     } else {
         CGU.querySelector("a").textContent = "CONDITIONS GÉNÉRALES D'UTILISATION";
     }
 }
-  // Attachez un gestionnaire d'événements resize à la fenêtre
+  // Gestionnaire d'événements resize attaché à la fenêtre
 window.addEventListener("resize", handleHtmlResize);
 
-  // Appelez la fonction pour gérer la taille initiale
+  // Appel de la fonction pour gérer la taille initiale
 handleHtmlResize();
 
 /// Rendre les changements JS selon la taille de l'élément possibles
 // Fonction pour gérer les changements de taille de l'élément HTML
 function handleHtmlResizeBis() {
-    // Obtenez la largeur de l'élément HTML
+    // Obtenir la largeur de l'élément HTML
     const htmlWidth = document.documentElement.clientWidth;
 
-    // Sélectionnez l'élément CGU par son ID
+    // Sélectionner l'élément Auteur par son ID
     let Auteur = document.getElementById("Auteur");
 
-    // Vérifiez la nouvelle largeur et changez le texte en conséquence
+    // Modification du contenu
     if (htmlWidth < 1000) {
         Auteur.querySelector("a").textContent = "D.H © 2023";
     } else {
         Auteur.querySelector("a").textContent = "Fait par D.H © 2023";
     }
 }
-  // Attachez un gestionnaire d'événements resize à la fenêtre
+  // Gestionnaire d'événements resize attaché à la fenêtre
 window.addEventListener("resize", handleHtmlResizeBis);
 
-  // Appelez la fonction pour gérer la taille initiale
+  // Appel de la fonction pour gérer la taille initiale
 handleHtmlResizeBis();
 
 ////////////////////////////////////////////////////////////////////////////////////////
-/// Tentative Bouton Fullscreen [à revoir]
-// Définir la variable isSticky en dehors de l'événement DOMContentLoaded
-let isSticky = true;
 
-function toggleSticky() {
-    const iframeContainer = document.querySelector('.iframe-container');
-    const divToToggle = document.querySelector('.input-group');
+/// Fonction pour faire disparaître la barre de navigation en appuyant sur un bouton
+function toggleSidebar() {
+    // Sélectionne l'élément de la barre de navigation avec la classe 'sidebar'
+    const sidebar = document.querySelector('.sidebar');
 
-    if (iframeContainer) {
-        if (isSticky) {
-            iframeContainer.style.position = 'static';
-            divToToggle.style.display = 'none';
-            isSticky = false;
-        } else {
-            iframeContainer.style.position = 'sticky';
-            divToToggle.style.display = 'flex';
-            isSticky = true;
-        }
+    // Vérifie si la barre de navigation est actuellement visible (display est 'block' ou vide)
+    if (sidebar.style.display === 'block' || sidebar.style.display === '') {
+        // Si la barre de navigation est visible, la masque en changeant sa propriété 'display' à 'none'
+        sidebar.style.display = 'none';
+    } else {
+        // Si la barre de navigation est masquée, l'affiche en changeant sa propriété 'display' à 'block'
+        sidebar.style.display = 'block';
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.querySelector('button#toggle-sticky');
-    toggleButton.addEventListener('click', toggleSticky);
-});
+// Ajout d'un écouteur d'événements de clic à l'élément avec l'ID 'toggle-fullscreen' pour activer la fonction toggleSidebar lorsque l'utilisateur clique dessus.
+document.getElementById('toggle-fullscreen').addEventListener('click', toggleSidebar);
 ////////////////////////////////////////////////////////////////////////////////////
 
-console.clear();
-
+// Sélectionne les éléments HTML avec les ID 'login' et 'signup'
 const loginBtn = document.getElementById('login');
 const signupBtn = document.getElementById('signup');
 
-loginBtn.addEventListener('click', (e) => {
-	let parent = e.target.parentNode.parentNode;
-	Array.from(e.target.parentNode.parentNode.classList).find((element) => {
-		if(element !== "slide-up") {
-			parent.classList.add('slide-up')
-		}else{
-			signupBtn.parentNode.classList.add('slide-up')
-			parent.classList.remove('slide-up')
-		}
-	});
-});
+// Vérifie si l'élément 'loginBtn' existe
+if (loginBtn) {
+    // Ajoute un écouteur d'événements au clic sur le bouton "login"
+    loginBtn.addEventListener('click', (e) => {
+        // Sélectionne l'élément parent du parent de l'élément déclencheur (e.target)
+        let parent = e.target.parentNode.parentNode;
+        
+        // Recherche la classe CSS différente de "slide-up" dans les classes de l'élément parent
+        Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+            if (element !== "slide-up") {
+                // Si une classe différente de "slide-up" est trouvée, ajoute la classe "slide-up" à l'élément parent
+                parent.classList.add('slide-up');
+            } else {
+                // Si la classe "slide-up" est trouvée, ajoute la classe "slide-up" à l'élément parent du bouton "signup" et retire la classe "slide-up" de l'élément parent actuel (la partie login)
+                signupBtn.parentNode.classList.add('slide-up');
+                parent.classList.remove('slide-up');
+            }
+        });
+    });
+}
 
-signupBtn.addEventListener('click', (e) => {
-	let parent = e.target.parentNode;
-	Array.from(e.target.parentNode.classList).find((element) => {
-		if(element !== "slide-up") {
-			parent.classList.add('slide-up')
-		}else{
-			loginBtn.parentNode.parentNode.classList.add('slide-up')
-			parent.classList.remove('slide-up')
-		}
-	});
-});
+// Vérifie si l'élément 'signupBtn' existe
+if (signupBtn) {
+    // Ajoute un écouteur d'événements au clic sur le bouton "signup"
+    signupBtn.addEventListener('click', (e) => {
+        // Sélectionne l'élément parent de l'élément déclencheur (e.target)
+        let parent = e.target.parentNode;
+        
+        // Recherche la classe CSS différente de "slide-up" dans les classes de l'élément parent
+        Array.from(e.target.parentNode.classList).find((element) => {
+            if (element !== "slide-up") {
+                // Si une classe différente de "slide-up" est trouvée, ajoute la classe "slide-up" à l'élément parent
+                parent.classList.add('slide-up');
+            } else {
+                // Si la classe "slide-up" est trouvée, ajoute la classe "slide-up" à l'élément parent du bouton "login" et retire la classe "slide-up" de l'élément parent actuel (la partie signup)
+                loginBtn.parentNode.parentNode.classList.add('slide-up');
+                parent.classList.remove('slide-up');
+            }
+        });
+    });
+}

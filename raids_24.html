@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="accueil.css" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/34ecdb89da.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -21,9 +22,8 @@
         <a class="child2" href="/raids_normaux.html">Raids normaux</a>
         <a class="child2" href="/raids_24.html">Raids en Alliance</a>
         <a class="intro2" href="/contact.html">Contact</a>
-        <a class="intro3" href="/connexion.html">Connexion</a>
-        <a class="intro3" href="/inscription.html">Inscription</a>
-        <a class="profil" href="/profil.html">Profil</a>
+        <a class="intro3" href="/compte.html">Compte</a>
+        <a class="intro3" href="/profil.html">Profil</a>
       </div>
 
 
@@ -38,41 +38,39 @@
         <iframe src="https://open.spotify.com/embed/artist/6NtwaHZLhTUvERKFbFqu8S?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe>
       </div>
   </div>
-  <div id="sticky-element" class="sticky">
-    <!-- Contenu de l'élément sticky -->
-</div>
-<button id="toggle-sticky" onclick="toggleSticky()">
-    <img src="src/img/icons/fullscreen.png" alt="Plein écran">
+<button id="toggle-fullscreen">
+  <i class="fa-solid fa-expand fa-2xl" style="color: #242424;"></i>
 </button>
-    <div class="input-group rounded">
-      <input type="search" class="form-control rounded" placeholder="Rechercher" id="searchInput" aria-label="Search" aria-describedby="search-addon" />
-        <span class="input-group-text border-0" id="search-addon">
-          <img src="src/img/FFXIV official icons/duty_finder.png" alt="Recherche" class="custom-search-image">
-        </span>
-    </div>      
-  </div>
-
-  <div class="two alt-two">
-    <h1>INTRODUCTION
-      <span>Présentation de Final Fantasy XIV</span>
-    </h1>
-  </div>
-
-
-<div class="footer">
-  <div class="container">
-    <ul class="nav border border-0 border-top mt-3 d-flex justify-content-between align-items-center">
-        <li class="nav-item">
-            <a class="nav-link text-secondary" href="#">MENTIONS LÉGALES</a>
-        </li>
-        <li class="nav-item" id="CGU">
-            <a class="nav-link text-secondary" href="#">CGU</a>
-        </li>
-        <li class="nav-item" id="Auteur">
-          <a class="nav-link text-secondary" href="#">D.H © 2023</a>
-      </li>
-    </ul>
+  <div class="input-group rounded">
+    <input type="search" class="form-control rounded" placeholder="Rechercher" id="searchInput" aria-label="Search" aria-describedby="search-addon" />
+      <span class="input-group-text border-0" id="search-addon">
+        <img src="src/img/FFXIV official icons/duty_finder.png" alt="Recherche" class="custom-search-image">
+      </span>
+  </div>      
 </div>
+<div class="two alt-two">
+  <h1>INTRODUCTION
+    <span>Présentation de Final Fantasy XIV</span>
+  </h1>
+</div>
+
+
+<div class="container">
+  <div class="row align-middle">
+    <div class="footer">
+      <ul class="nav border border-0 border-top mt-3 d-flex justify-content-between align-items-center">
+          <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">MENTIONS LÉGALES</a>
+          </li>
+          <li class="nav-item" id="CGU">
+              <a class="nav-link text-secondary" href="#">CGU</a>
+          </li>
+          <li class="nav-item" id="Auteur">
+            <a class="nav-link text-secondary" href="#">D.H © 2023</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <script src="script.js" async></script>

@@ -39,16 +39,18 @@ p{
 	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
 }
 
-/* Ciblez l'élément avec la classe "throwback" à l'intérieur de l'élément ayant la classe "image-container" */
+/* Cible l'élément avec la classe "throwback" à l'intérieur de l'élément ayant la classe "image-container" */
 .image-container.throwback {
-    position: relative; /* Vous pouvez ajouter ceci si nécessaire */
+    position: relative;
     justify-items: center;
 }
 
+/* Ajuste le z-index pour que le cadre d'image passe au dessus de celui de la légende*/
 .image-container.throwback iframe {
     z-index: 4;
 }
 
+/* Ajuste le z-index pour que l'image passe au dessus de celui de la légende*/
 .image-container.throwback img {
     z-index: 4; 
 }
@@ -186,7 +188,7 @@ p{
 
 
 
-/* Ciblez l'élément figcaption à l'intérieur de l'élément avec la classe "image-container" ayant la classe "throwback" */
+/* Cible l'élément figcaption à l'intérieur de l'élément avec la classe "image-container" ayant la classe "throwback" */
 .image-container.throwback figcaption {
     background: rgba(225, 225, 225, 0.8);
     bottom: 0;

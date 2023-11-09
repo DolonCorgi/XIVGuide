@@ -1,14 +1,12 @@
-HTML: Rajouter les trailers dans les extensions
+HTML:
 
 CSS: 
 
 
 Javascript:
-Régler le bouton spotify et faire le trick de sticky à fixed pour la sidebar pour l'effet side bar qui disparaît
 
-cliquer sur le logo : .sidebar position fixed opacity 0 --> trigger un bouton qui apparait sur la page (le logo idéalement)
-cliquer sur le logo à nouveau: .siderbar position sticky opacity 1 --> cache le bouton
 
 
 Utiliser ces trucs propres:
 https://www.bootdey.com/snippets/view/Note-cards
+

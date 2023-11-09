@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="guides.css" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/34ecdb89da.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -21,9 +22,8 @@
         <a class="child2" href="/raids_normaux.html">Raids normaux</a>
         <a class="child2" href="/raids_24.html">Raids en Alliance</a>
         <a class="intro2" href="/contact.html">Contact</a>
-        <a class="intro3" href="/connexion.html">Connexion</a>
-        <a class="intro3" href="/inscription.html">Inscription</a>
-        <a class="profil" href="/profil.html">Profil</a>
+        <a class="intro3" href="/compte.html">Compte</a>
+        <a class="intro3" href="/profil.html">Profil</a>
       </div>
 
 
@@ -34,15 +34,12 @@
   </div>
   <div class="container2">
     <div class="header-spotify">
-      <div style="left: 0; width: 100%; height: 80px; position: sticky; z-index: 99;">
+      <div style="left: 0; width: 100%; height: 80px; position: sticky; z-index: 1;">
         <iframe src="https://open.spotify.com/embed/artist/6NtwaHZLhTUvERKFbFqu8S?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe>
       </div>
   </div>
-  <div id="sticky-element" class="sticky">
-    <!-- Contenu de l'élément sticky -->
-</div>
-<button id="toggle-sticky" onclick="toggleSticky()">
-    <img src="src/img/icons/fullscreen.png" alt="Plein écran">
+<button id="toggle-fullscreen">
+  <i class="fa-solid fa-expand fa-2xl" style="color: #242424;"></i>
 </button>
     <div class="input-group rounded">
       <input type="search" class="form-control rounded" placeholder="Rechercher" id="searchInput" aria-label="Search" aria-describedby="search-addon" />
@@ -73,11 +70,10 @@
           </div>
           <div class="section section-1">
             <h2>Sur cette page vous retrouverez:</h2>
-            <p>&ensp; -
-              &ensp; -
-              &ensp; -
-              &ensp; -
-              &ensp; -
+            <p>&ensp; - Une explication du le système de combat
+              &ensp; - Une présentation sur les différents rôles et leurs actions
+              &ensp; - Un résumé sur chacun des jobs 
+              &ensp; - Un résumé sur les différents types de contenus de combat disponibles 
             </p>
             <br>
             <ul>
@@ -100,11 +96,11 @@
           </div>
           <div class="section section-2">
             <h2>Sur cette page vous retrouverez:</h2>
-            <p>&ensp; -
-              &ensp; -
-              &ensp; -
-              &ensp; -
-              &ensp; -
+            <p>&ensp; - Une explication sur le déroulement général d'un donjon
+              &ensp; - La liste des différents donjons d'Endwalker
+              &ensp; - Un guide pour chaque boss de tous les donjons présent dans la liste 
+              
+              <b>/!\</b> Une bonne partie des donjons sont liés à l'épopée, certains des noms et visuels que vous retrouverez sur cette page contiendront des <b>spoilers</b>.
             </p>
             <br>
             <ul>
@@ -127,11 +123,11 @@
             </div>
             <div class="section section-3">
               <h2>Sur cette page vous retrouverez:</h2>
-              <p>&ensp; -
-                &ensp; -
-                &ensp; -
-                &ensp; -
-                &ensp; -
+              <p>&ensp; - Une explication sur le déroulement général d'un défi
+                &ensp; - La liste des différents défis d'Endwalker
+                &ensp; - Un guide pour chaque combat de tous les défis présents dans la liste 
+                
+                <b>/!\</b> Les défis étant des combats assez importants pour l'épopée, les noms et visuels que vous retrouverez sur cette page contiendront des <b>spoilers</b>.
               </p>
               <br>
               <ul>
@@ -154,11 +150,11 @@
             </div>
             <div class="section section-4">
               <h2>Sur cette page vous retrouverez:</h2>
-              <p>&ensp; -
-                &ensp; -
-                &ensp; -
-                &ensp; -
-                &ensp; -
+              <p>&ensp; - Une explication sur le déroulement général d'un raid normal
+                &ensp; - La liste des différents raids normaux d'Endwalker
+                &ensp; - Un guide pour chaque combat de tous les raids normaux présents dans la liste 
+                
+                <b>/!\</b> Bien que les raids normaux d'Endwalker ne soient pas des combats importants pour l'épopée, les noms et visuels que vous retrouverez sur cette page contiendront des <b>spoilers</b> pour l'histoire liée à cette série de raids.
               </p>
               <br>
               <ul>
@@ -181,11 +177,11 @@
             </div>
             <div class="section section-5">
               <h2>Sur cette page vous retrouverez:</h2>
-              <p>&ensp; -
-                &ensp; -
-                &ensp; -
-                &ensp; -
-                &ensp; -
+              <p>&ensp; - Une explication sur le déroulement général d'un raid en alliance
+                &ensp; - La liste des différents raids en alliance d'Endwalker
+                &ensp; - Un guide pour chaque combat de tous les raids en alliance présents dans la liste 
+                
+                <b>/!\</b> Bien que les raids en alliance d'Endwalker ne soient pas des combats importants pour l'épopée, les noms et visuels que vous retrouverez sur cette page contiendront des <b>spoilers</b> pour l'histoire liée à cette série de raids.                
               </p>
               <br>
               <ul>
@@ -197,20 +193,23 @@
       </label>
   </div>
 
-<div class="footer">
-  <div class="container">
-    <ul class="nav border border-0 border-top mt-3 d-flex justify-content-between align-items-center">
-        <li class="nav-item">
-            <a class="nav-link text-secondary" href="#">MENTIONS LÉGALES</a>
-        </li>
-        <li class="nav-item" id="CGU">
-            <a class="nav-link text-secondary" href="#">CGU</a>
-        </li>
-        <li class="nav-item" id="Auteur">
-          <a class="nav-link text-secondary" href="https://github.com/DolonCorgi">D.H © 2023</a>
-      </li>
-    </ul>
-</div>
+
+<div class="container">
+  <div class="row align-middle">
+    <div class="footer">
+      <ul class="nav border border-0 border-top mt-3 d-flex justify-content-between align-items-center">
+          <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">MENTIONS LÉGALES</a>
+          </li>
+          <li class="nav-item" id="CGU">
+              <a class="nav-link text-secondary" href="#">CGU</a>
+          </li>
+          <li class="nav-item" id="Auteur">
+            <a class="nav-link text-secondary" href="https://github.com/DolonCorgi">D.H © 2023</a>
+          </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <script src="script.js" async></script>

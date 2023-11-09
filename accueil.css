@@ -40,7 +40,7 @@
 
 .gr-1, .gr-2, .gr-3, .gr-4, .gr-5 {
   background-size: cover;
-  background-position: center; /* Optionnel : Centre l'image horizontalement et verticalement */
+  background-position: center; /*Centre l'image horizontalement et verticalement */
 }
 
 /*****CARDS*****/

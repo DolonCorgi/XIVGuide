@@ -9,6 +9,11 @@
     font-family: TrajanPro-Regular;
 }
 
+/*Ajustement taille du footer*/
+.footer{
+    width: 65% !important;
+}
+
 /* ACCORDEON GUIDES */
 * {
     -webkit-box-sizing: border-box;
