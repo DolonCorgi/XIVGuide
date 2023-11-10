@@ -180,28 +180,6 @@
   transition: 0.5s;
 }
 
-.card .ico-card {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  max-height: 400px;
-  overflow: hidden;
-}
-
-.card i {
-  position: relative;
-  right: 0;
-  font-size: 12rem;
-  line-height: 0;
-  opacity: 0.2;
-  color: rgba(255, 255, 255, 1);
-  z-index: 0;
-}
-
 /*****CARDS HOVER*****/
 .column:hover .card .txt h1{
   color:rgb(47, 106, 244);
