@@ -1,0 +1,353 @@
+/*---------------------------------------------*/
+h1,h2,h3,h4,h5,h6 {
+    margin: 0px;
+}
+
+p {
+    font-family: TrajanPro-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+}
+
+
+/*---------------------------------------------*/
+input, textarea {
+    outline: none;
+    border: none;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+/* Underline styles - */
+.contact100-form-title {
+background: 
+  linear-gradient(to right, rgb(146, 146, 146), rgb(146, 146, 146)),
+  linear-gradient(to right, rgba(214, 66, 66, 0.926), rgb(226, 226, 226));
+background-size: 100% 0.1em, 0 0.1em;
+background-position: 60% 60%, 0 60%;
+background-repeat: no-repeat;
+transition: background-size 400ms;
+}
+
+.contact100-form-title:hover,
+.contact100-form-title:focus {
+background-size: 0 0.1em, 100% 0.1em;
+}
+
+input:hover:not(:focus),textarea:hover:not(:focus) {
+  box-shadow: 7px 7px 15px rgba(204, 204, 204, 0.926);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+
+/*---------------------------------------------*/
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+
+/*---------------------------------------------*/
+.container-impression {
+    max-width: 1200px;
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Contact ]*/
+
+.container-contact100 {
+  width: 100%;  
+  min-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #f2f2f2;
+}
+
+.wrap-contact100 {
+  width: 550px;
+  background: transparent;
+}
+
+
+/*==================================================================
+[ Form ]*/
+
+.contact100-form {
+  width: 100%;
+  padding: 15px;
+}
+
+.contact100-form-title {
+  display: block;
+  font-family: TrajanPro;
+  font-size: 30px;
+  color: rgb(179, 179, 178);
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.contact100-form-title-red {
+  display: block;
+  font-family: TrajanPro;
+  font-size: 30px;
+  color: rgba(214, 66, 66, 0.926);
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.input100 {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-radius: 31px;
+  font-family: Eurostile;
+  font-size: 18px;
+  color: rgba(214, 66, 66, 0.926);
+  line-height: 1.2;
+}
+
+/*  mobile sized media query */
+@media (min-width: 300px) and (max-width: 1099px) {
+
+  .input100 {
+    font-size: 15px;
+  }
+}
+
+
+/*---------------------------------------------*/
+input.input100 {
+  height: 62px;
+  padding: 0 35px 0 35px;
+}
+
+
+textarea.input100 {
+  min-height: 169px;
+  padding: 19px 35px 0 35px;
+  resize: none;
+}
+
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-contact100-form-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.contact100-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 150px;
+  height: 62px;
+  background-color: transparent;
+  border-radius: 31px;
+
+  font-family: TrajanPro-Regular;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.contact100-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 31px;
+  background-color: #a5a5a5;
+  pointer-events: none;
+  
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact100-form-btn:hover:before {
+  background-color: #4b4b4b;
+  width: calc(100% + 20px);
+}
+
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'TrajanPro-Regular';
+}
+
+.container-impression {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* individual card styling */
+.card {
+  grid-area: card;
+  box-sizing: border-box;
+  background: #733FC8;
+  border-radius: 10px;
+  padding: 1em 0.75em;
+  margin: 1em;
+  display: grid;
+  grid-template-columns: 45px auto;
+  grid-template-areas:
+      "img name"
+      "img world"
+      "img date"
+      "testimonial testimonial";
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover{
+box-shadow: 7px 7px 15px rgba(52, 52, 52, 0.926);
+}
+
+.card__name {
+  grid-area: name;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.card__world {
+  grid-area: world;
+  font-size: 1.2rem;
+  opacity: 50%;
+  margin-top: 2px;
+  color: #b88cfa;
+}
+
+.card__world b {
+  color:#8053c9;
+}
+
+.world2 {
+color: #f7a944;
+}
+
+.world2 b {
+color: #f5900d;
+}
+
+.card__date {
+  grid-area: date;
+  font-size: 1.2rem;
+  opacity: 50%;
+  color: #b88cfa;
+}
+
+.card__date b {
+  color:#8053c9;
+}
+
+.date2 {
+  color: #f7a944;
+}
+
+.date2 b {
+color: #f5900d;
+}
+
+.card__testimonial {
+  font-size: 1rem;
+  grid-area: testimonial;
+  color: black;
+  opacity: 100%;
+  line-height: 1.6;
+}
+
+/*  tablet sized media query */
+@media (min-width: 300px) and (max-width: 1099px) {
+
+  .card {
+      margin: 0.5em;
+      max-width: 1000px;
+  }
+}
+
+/* desktop sized media query */
+@media (min-width: 1100px) {
+
+
+  .card {
+      padding: 2em;
+      margin-top: 1rem;
+      max-width: 1000px;
+  }
+
+  .card1 {
+      background-position: 80% 0%;
+  }
+}

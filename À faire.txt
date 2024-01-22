@@ -1,12 +1,23 @@
-HTML:
+HTML: Trouver comment donner l'info de l'utilisateur
+Mettre à jour le changelog de l'accueil
 
-CSS: 
-
-
-Javascript:
+CSS: Gérer les polices et les tailles de texte sur les nouvelles pages
 
 
+Javascript: Bcript pour hasher le MDP/ Regex pour le mot de passe ??
 
-Utiliser ces trucs propres:
+
+Page de Guide:
+Utiliser ces trucs propres
 https://www.bootdey.com/snippets/view/Note-cards
 
+
+
+Use case: Faire un zoom sur une partie que je vais présenter en fonctionnalité
+
+
+Inspi de site: https://landofgames.ru/fr/articles/guides/24143-gidrotulpa-v-genshin-impact-kak-najti-i-pobedit.html
+https://www.ffxiv-sitis.com/Notre_Charte.b.htm
+
+
+Idées conseils : https://youtu.be/3RLZIw6MX5I

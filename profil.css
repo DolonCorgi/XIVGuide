@@ -1,0 +1,92 @@
+
+/* Profil style */
+
+.profil{
+background:#c7c6cf;
+}
+
+.profil h4{
+    font-family: "TrajanPro-Regular";
+}
+
+/* Style de h4 */
+.h4-text {
+    background-color: #FCFCFC;
+    padding: 0 5px;
+}
+
+.h4-answer {
+    max-width: 90%; /* Empêche de dépasser le cadre */
+    font-size: 22px;
+}
+
+/* Avatar style */
+
+.avatar {
+    text-align: center;	
+    justify-content: center;
+    padding-top: 10px !important; 
+}
+
+.avatarCicle{
+    width: 200px !important;
+    height: 200px !important;
+    background-image: url("/src/img/FFXIV official art/Hydaelyn.png");
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center; /*Centre l'image horizontalement et verticalement */
+    border: 3px solid grey;
+}
+
+/* Infos style */
+
+.infos{
+    margin-top: 100px !important; 
+}
+
+.h4-answer-textbox-edit {
+    min-height: 200px; /* Ajoutez la hauteur maximale souhaitée */
+    max-width: 90%; /* Empêche de dépasser le cadre */
+    overflow-y: auto; /* Ajoutez le défilement vertical si nécessaire */
+    word-wrap: break-word; /* Force le retour à la ligne des mots */
+    text-align: left; /* Ajuste l'alignement du texte à gauche */
+}
+
+.h4-answer-textbox-edit::placeholder {
+    word-wrap: break-word; /* Force le retour à la ligne des mots */
+    white-space: normal; /* Permet aux espaces de forcer le retour à la ligne */
+    max-width: 100%; /* Ajuste la largeur maximale en fonction du conteneur parent */
+    box-sizing: border-box; /* Inclut la bordure et le rembourrage dans la largeur et la hauteur */
+    font-size: medium !important;
+}
+
+/* Bouton style */
+.button {
+    padding: 15px 100px;
+    margin: 10px 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+.button:hover {
+    opacity: 0.5;
+}
+
+/*****MEDIA QUERIES*****/
+
+@media screen and (max-width: 800px){
+    .infos{
+        margin-top: 60px !important; 
+    }
+    .h4-text{
+        font-size: calc(0.875rem + .2vw)!important;
+    }
+    .h4-answer-textbox-edit::placeholder {
+        font-size: calc(0.875rem + .2vw)!important;
+    }
+    .h4-answer {
+        max-width: 90%; /* Empêche de dépasser le cadre */
+        font-size: calc(0.875rem + .2vw)!important;
+    }
+}

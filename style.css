@@ -18,6 +18,7 @@ body {
   position:relative;
   align-items: flex-start;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .header {
@@ -48,6 +49,10 @@ body {
   max-height: 100vh;
 }
 
+.row>* {
+  padding-right: 0!important; /*Retire le padding de mon système de lignes pour faire prendre plus d'espace à mon contenu */
+}
+
 .sidebar a {
   display: block;
   color: black;
@@ -57,12 +62,11 @@ body {
 
 .sidebar a.logo {
   background-color: rgba(214, 66, 66, 0.926);
-  color: white;
-  height: 110px; /*Rends le logo plus constant au niveau de sa taille (pas trop petit, pas trop grand)*/
+  height: 120px; /*Rends le background du logo plus constant au niveau de sa taille (pas trop petit, pas trop grand)*/
+  padding: 0; /*Centre le logo en retirant les attributs des autres liens textes de la sidebar.*/
 }
 
-.sidebar a.logo:hover {
-  background-color: rgba(196, 34, 34, 0.868);  
+.sidebar a.logo:hover { 
   box-shadow: 3px 3px 10px rgba(196, 34, 34, 0.868);
 }
 
@@ -79,6 +83,7 @@ div.content {
   flex-grow: 3;
   width: 70%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* Titre de Page */
@@ -144,11 +149,11 @@ div.content {
 .header-spotify{
   width: 45%;
   margin-right: 5%;
+  border-radius:13px; /*Retire la bordure blanche de l'embed*/
 }
 
 .header-spotify:hover{
-  border-color: rgba(117, 83, 190, 0.926);
-  box-shadow: 7px 7px 15px rgba(96, 104, 216, 0.868);
+  box-shadow: 7px 7px 15px rgba(223,208,143, 0.868);
 }
 
 .fullscreen {
@@ -234,6 +239,7 @@ span#search-addon.input-group-text.border-0:focus {
   font-family: TrajanPro-Regular;
   font-size: x-large;
 }
+
 
 /* Règles CSS pour limiter la largeur du texte sur les écrans de moins de 400px */
 @media screen and (max-width: 400px) {
@@ -335,7 +341,6 @@ span#search-addon.input-group-text.border-0:focus {
     .footer {
       position:absolute;
       font-size: 0.8em;
-      width: 70%;
     }  
 }
 
@@ -445,7 +450,7 @@ span#search-addon.input-group-text.border-0:focus {
   .footer {
     position:absolute;
     font-size: 0.8em;
-    width: 60%;
+    width: 60%; /*Ajuste la taille du footer pour le centrer un peu plus dans cette taille de contenu*/
   }  
 }
 
@@ -582,11 +587,6 @@ span#search-addon.input-group-text.border-0:focus {
     text-align: center;
     float: none;
   }
-  .sidebar a.logo {
-    display: flex;
-    font-size: 2.5vw;
-    justify-content: center;
-}
   .sidebar a.accueil {
       display: flex;
       font-size: 1.8vw;

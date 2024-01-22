@@ -20,3 +20,26 @@ connexion.connect((err) =>{
     }
     console.log("DB " + connexion.state + ".");
 });
+
+// Fonction pour récupérer les guides
+async function getGuides(){
+    const query = 
+    `SELECT * FROM guides`;
+
+    try{
+        const guide = await new Promise((resolve, reject) =>{
+            connexion.query(query, (error, results) =>{
+                if(error){
+                    reject(error);
+                } else{
+                    resolve(results);
+                }
+            });
+        });
+        return guide;
+    } catch(error){
+        throw error;
+    }
+}
+
+module.exports= {getGuides};

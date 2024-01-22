@@ -108,3 +108,36 @@ if (signupBtn) {
         });
     });
 }
+
+// Agrandit l'espace d'input selon le placeholder
+const input = document.querySelectorAll('input');
+for(i=0; i<input.length; i++){
+    input[i].setAttribute('size',input[i].getAttribute('placeholder').length);
+}
+
+
+
+// BDD //
+
+        // Fonction pour effectuer la requête AJAX
+        async function fetchGuides() {
+            try {
+                const response = await fetch('/api/guides');
+                const data = await response.json();
+
+                // Mettez à jour le contenu de la div avec les données récupérées
+                const contenuGuideDiv = document.querySelector('.contenu-guide');
+                contenuGuideDiv.innerHTML = '';
+
+                data.forEach(guide => {
+                    const guideContent = document.createElement('p');
+                    guideContent.textContent = guide.contenu;
+                    contenuGuideDiv.appendChild(guideContent);
+                });
+            } catch (error) {
+                console.error('Erreur lors de la récupération des guides:', error);
+            }
+        }
+
+        // Appelez la fonction au chargement de la page ou à un moment approprié
+        window.onload = fetchGuides;

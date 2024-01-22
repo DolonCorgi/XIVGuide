@@ -3,15 +3,16 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="accueil.css" />
+<link rel="stylesheet" href="raids_normaux.css" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/34ecdb89da.js" crossorigin="anonymous"></script>
+<script src="script.js" defer></script>
 </head>
 <body>
 
     <div class="sidebar">
-        <a class="logo" href="#home">Logo</a>
+        <a class="logo" href="#home"><img src="src/img/logo.png"></img></a>
         <a class="accueil" href="/accueil.html">Accueil</a>
         <a class="intro" href="/intro.html">Introduction à FFXIV</a>
         <a class="child" href="/lexique.html">Lexique du jeu</a>
@@ -34,13 +35,10 @@
   </div>
   <div class="container2">
     <div class="header-spotify">
-      <div style="left: 0; width: 100%; height: 80px; position: sticky; z-index: 99;">
-        <iframe src="https://open.spotify.com/embed/artist/6NtwaHZLhTUvERKFbFqu8S?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe>
+      <div style="left: 0; width: 100%; height: 80px; position: sticky;">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3oVyCVU76IRV2h3fQFIm1S?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"  ></iframe>
       </div>
   </div>
-  <div id="sticky-element" class="sticky">
-    <!-- Contenu de l'élément sticky -->
-</div>
 <button id="toggle-fullscreen">
   <i class="fa-solid fa-expand fa-2xl" style="color: #242424;"></i>
 </button>
@@ -53,14 +51,179 @@
 </div>
 
   <div class="two alt-two">
-    <h1>INTRODUCTION
-      <span>Présentation de Final Fantasy XIV</span>
+    <h1>RAIDS NORMAUX
+      <span>Guides pour les raids à 8 d'Endwalker.</span>
     </h1>
   </div>
 
+  <div class="container h-100">
+    <div class="row align-middle guides">
+      <label class="normal-checkbox" for="chk-1 normal">
+    
+        <input id="chk-1 normal" type="checkbox">
+          <div class="title title-1">
+            <h3>Pandaemonium 01 - Parvis <b>(Normal)</b></h3>
+          </div>
+          <div class="content">
+            <div class= "image-container">
+              <img src="src/img/FFXIV official art/parvis.png"></img>
+            </div>
+            <p><i>Description en jeu: </i>
+              Alors que vous touchez un cristal provenant des profondeurs de la mer des étoiles et ressemblant étrangement à celui trouvé dans La Tempête, une voix retentit dans votre esprit et vous supplie de vous rendre à Elpis pour sauver le Pandaemonium d'une terrible menace. Sur place, vous vous associez à Thémis, un agent du Concile des Quartoze lui aussi venu pour enquêter sur l'établissement géré par l'institut Lahabrea... Ensemble, aventurez-vous dans cette prison peuplée de créatures plus dangereuses les unes que les autres et levez le voile sur le mystérieux mal qui s'y est insinué!
+            <i>Informations et conditions: </i>
+            1 à 8 joueurs de niveau 90
+            Niveau d'objet moyen <b>565</b> ou plus</p>
+            <div class="row align-middle mt-2">
+            
+            </div>
+          </div>
+        </label>
+      <label class="savage-checkbox" for="chk-1 savage">
+  
+        <input id="chk-1 savage" type="checkbox">
+          <div class="title title-2">
+            <h3>Pandaemonium 01 - Parvis <b>(Sadique)</b></h3>
+          </div>
+          <div class="content">
+            <div class="image-container">
+              <img src="src/img/FFXIV official art/parvis-sadique.png"></img>
+            </div>
+            <p><i>Description en jeu: </i>
+              Vous avez raconté vos péripéties dans le Pandæmonium à Nemjiji, l'assistante du professeur Claudien. Visiblement très (trop ?) intéressée par les entités du passé que vous avez affrontées, la jeune chercheuse s'est empressée de consigner votre témoignage à leur sujet, non sans y adjoindre quelques hypothèses tout droit issues de son imagination... Peut-on encore parler de démarche scientifique ? La question demeure entière. Néanmoins, vous n'avez rien à perdre à écouter ses théories ni à les éprouver mentalement...
+            <i>Informations et conditions: </i>
+            1 à 8 joueurs de niveau 90
+            Niveau d'objet moyen <b>570</b> ou plus</p>
+            <div class="row align-middle mt-2">
+              <p><i>Stratégie: </i>
+                <div class="contenu-guide">  </div>
+              </p>
+            </div>
+          </div>
+        </label>
+      <label class="normal-checkbox" for="chk-2 normal">
+
+        <input id="chk-2 normal" type="checkbox">
+          <div class="title title-1">
+            <h3>Pandaemonium 02 - Cloaque <b>(Normal)</b></h3>
+          </div>
+          <div class="content">
+            <div class= "image-container">
+              <img src="src/img/FFXIV official art/cloaque.png"></img>
+            </div>
+            <p><i>Description en jeu: </i>
+              Érichthonios, que vous avez vaincu et ramené à la raison, vous a appris que les Limbes du Pandæmonium sont sous une emprise néfaste qui a provoqué la libération des créatures qui y étaient détenues. Pour éviter qu'elles ne s'échappent à l'extérieur et mettent en danger la population, Thémis propose au geôlier de lui prêter son énergie afin qu'il utilise le sort Cage et reprenne le contrôle... Votre première cible sera un hippokampos, un redoutable monstre aquatique chevalin qui a fait du cloaque son repaire.
+            <i>Informations et conditions: </i>
+            1 à 8 joueurs de niveau 90
+            Niveau d'objet moyen <b>565</b> ou plus</p>
+            <div class="row align-middle mt-2">
+            
+            </div>
+          </div>
+        </label>
+      <label class="savage-checkbox" for="chk-2 savage">
+  
+        <input id="chk-2 savage" type="checkbox">
+          <div class="title title-2">
+            <h3>Pandaemonium 02 - Cloaque <b>(Sadique)</b></h3>
+          </div>
+          <div class="content">
+            <div class= "image-container">
+              <img src="src/img/FFXIV official art/cloaque-sadique.png"></img>
+            </div>
+            <p><i>Description en jeu: </i>
+              Vous avez raconté vos péripéties dans le Pandæmonium à Nemjiji, l'assistante du professeur Claudien. Visiblement très (trop ?) intéressée par les entités du passé que vous avez affrontées, la jeune chercheuse s'est empressée de consigner votre témoignage à leur sujet, non sans y adjoindre quelques hypothèses tout droit issues de son imagination... Peut-on encore parler de démarche scientifique ? La question demeure entière. Néanmoins, vous n'avez rien à perdre à écouter ses théories ni à les éprouver mentalement...
+            <i>Informations et conditions: </i>
+            1 à 8 joueurs de niveau 90
+          Niveau d'objet moyen <b>575</b> ou plus</p>
+            <div class="row align-middle mt-2">
+            
+            </div>
+          </div>
+        </label>
+      <label class="normal-checkbox" for="chk-3 normal">
+
+        <input id="chk-3 normal" type="checkbox">
+          <div class="title title-1">
+            <h3>Pandaemonium 03 - Fournaise <b>(Normal)</b></h3>
+          </div>
+          <div class="content">
+            <div class= "image-container">
+              <img src="src/img/FFXIV official art/fournaise.png"></img>
+            </div>
+            <p><i>Description en jeu: </i>
+              En unissant vos forces avec Thémis et Érichthonios, vous avez réussi à remettre en cage l'hippokampos, la créature aquatique du cloaque. À présent, vous plongez courageusement dans les niveaux inférieurs des Limbes du Pandæmonium pour affronter le protophénix, une version abandonnée du concept du phénix sur lequel Lahabrea travaillait d'arrache-pied. D'un tempérament plus qu'agressif, l'oiseau géant à trois têtes a transformé les sous-sols des lieux en une fournaise où le feu, l'élément dans lequel il puise son immense énergie, crépite sans jamais s'éteindre. Parviendrez-vous à endurer cette température infernale et à triompher de votre imposant ennemi aérien ?
+            <i>Informations et conditions: </i>
+            1 à 8 joueurs de niveau 90
+            Niveau d'objet moyen <b>565</b> ou plus</p>
+            <div class="row align-middle mt-2">
+            
+            </div>
+          </div>
+        </label>
+      <label class="savage-checkbox" for="chk-3 savage">
+
+        <input id="chk-3 savage" type="checkbox">
+          <div class="title title-2">
+            <h3>Pandaemonium 03 - Fournaise <b>(Sadique)</b></h3>
+          </div>
+          <div class="content">
+            <div class= "image-container">
+              <img src="src/img/FFXIV official art/fournaise-sadique.png"></img>
+            </div>
+            <p><i>Description en jeu: </i>
+              Vous avez raconté vos péripéties dans le Pandæmonium à Nemjiji, l'assistante du professeur Claudien. Visiblement très (trop ?) intéressée par les entités du passé que vous avez affrontées, la jeune chercheuse s'est empressée de consigner votre témoignage à leur sujet, non sans y adjoindre quelques hypothèses tout droit issues de son imagination... Peut-on encore parler de démarche scientifique ? La question demeure entière. Néanmoins, vous n'avez rien à perdre à écouter ses théories ni à les éprouver mentalement...
+            <i>Informations et conditions: </i>
+            1 à 8 joueurs de niveau 90
+          Niveau d'objet moyen <b>580</b> ou plus</p>
+            <div class="row align-middle mt-2">
+            
+            </div>
+          </div>
+        </label>
+      <label class="normal-checkbox" for="chk-4 normal">
+
+        <input id="chk-4 normal" type="checkbox">
+          <div class="title title-1">
+            <h3>Pandaemonium 04 - Abîme <b>(Normal)</b></h3>
+          </div>
+          <div class="content">
+            <div class= "image-container">
+              <img src="src/img/FFXIV official art/abime.png"></img>
+            </div>
+            <p><i>Description en jeu: </i>
+              Celui qui cherchait à briser les champs de force qui entourent le Pandæmonium n'était nul autre qu'Hespéros, le grand geôlier des Limbes en personne. Il vous a fait part de sa haine envers Érichthonios, qu'il a toujours estimé indigne de son illustre père, Lahabrea. Afin de mieux servir ce dernier, Hespéros prétend avoir fusionné avec une créature exceptionnelle. Ainsi, il serait devenu un être semi-divin qu'il appelle "hémithéos"... Puisqu'il semble avoir perdu la raison, empêchez-le de nuire davantage avant qu'il ne soit trop tard !
+            <i>Informations et conditions: </i>
+            1 à 8 joueurs de niveau 90
+            Niveau d'objet moyen <b>565</b> ou plus</p>
+            <div class="row align-middle mt-2">
+            
+            </div>
+          </div>
+        </label>
+      <label class="savage-checkbox" for="chk-4 savage">
+
+        <input id="chk-4 savage" type="checkbox">
+          <div class="title title-2">
+            <h3>Pandaemonium 04 - Abîme <b>(Sadique)</b></h3>
+          </div>
+          <div class="content">
+            <div class= "image-container">
+              <img src="src/img/FFXIV official art/abime-sadique.png"></img>
+            </div>
+            <p><i>Description en jeu: </i>
+              Vous avez raconté vos péripéties dans le Pandæmonium à Nemjiji, l'assistante du professeur Claudien. Visiblement très (trop ?) intéressée par les entités du passé que vous avez affrontées, la jeune chercheuse s'est empressée de consigner votre témoignage à leur sujet, non sans y adjoindre quelques hypothèses tout droit issues de son imagination... Peut-on encore parler de démarche scientifique ? La question demeure entière. Néanmoins, vous n'avez rien à perdre à écouter ses théories ni à les éprouver mentalement...
+            <i>Informations et conditions: </i>
+            1 à 8 joueurs de niveau 90
+          Niveau d'objet moyen <b>580</b> ou plus</p>
+            <div class="row align-middle mt-2">
+            
+            </div>
+          </div>
+        </label>
+    </div>
+  </div>
 
 <div class="container">
-  <div class="row align-middle">
     <div class="footer">
       <ul class="nav border border-0 border-top mt-3 d-flex justify-content-between align-items-center">
           <li class="nav-item">
@@ -74,9 +237,6 @@
         </li>
       </ul>
     </div>
-  </div>
 </div>
-
-<script src="script.js" async></script>
 </body>
 </html>
