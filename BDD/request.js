@@ -1,30 +1,30 @@
-//Variables
+// Variables
 const cors = require('cors');
 const dotenv = require('dotenv');
-const mysql = require('mysql');
 const express = require('express');
+const fonction = require('./fonctions');
 
-//Mise en place
+// Configuration
 dotenv.config();
 
+// Mise en place
 const app = express();
-const fonction = require('./fonctions')
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
-app.listen(3000, () =>{
+app.listen(3000, () => {
     console.log("App is running...");
 });
 
-// Requête GET pour récupérer les guides
-app.get('/getGuides', async(req, res) =>{
-    try{
-        const guides = await fonction.getGuides();
-        res.json(guides);
-    } catch(error){
+// Route pour récupérer les guides avec les phases
+app.get('/getGuidesWithPhases', async (req, res) => {
+    try {
+        const guidesWithPhases = await fonction.getGuidesWithPhases();
+        res.json(guidesWithPhases);
+    } catch (error) {
         console.error(error);
-        res.status(500).send(`Erreur lors de la récupération du contenu du guide: ${error}`);
+        res.status(500).send(`Erreur lors de la récupération des guides avec les phases: ${error}`);
     }
 });

@@ -1,19 +1,13 @@
 HTML: Trouver comment donner l'info de l'utilisateur
-Mettre à jour le changelog de l'accueil
-
-CSS: Gérer les polices et les tailles de texte sur les nouvelles pages
 
 
 Javascript: Bcript pour hasher le MDP/ Regex pour le mot de passe ??
 
 
 Page de Guide:
-Utiliser ces trucs propres
+Utiliser ces trucs propres pour les mots du lexique
 https://www.bootdey.com/snippets/view/Note-cards
 
-
-
-Use case: Faire un zoom sur une partie que je vais présenter en fonctionnalité
 
 
 Inspi de site: https://landofgames.ru/fr/articles/guides/24143-gidrotulpa-v-genshin-impact-kak-najti-i-pobedit.html

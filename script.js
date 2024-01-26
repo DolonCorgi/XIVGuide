@@ -1,4 +1,4 @@
-/// Rendre les changements JS selon la taille de l'élément possibles
+/// Rendre les changements d'HTML selon la taille de l'écran possibles
 // Fonction pour gérer les changements de taille de l'élément HTML
 function handleHtmlResize() {
     // Obtenir la largeur de l'élément HTML
@@ -109,35 +109,94 @@ if (signupBtn) {
     });
 }
 
+// BDD //
+
+// Fonction pour récupérer les données du guide et générer le code HTML
+function displayGuide(guideId) {
+    fetch(`http://localhost:3000/getGuidesWithPhases`)
+        .then(response => response.json())
+        .then(guidesWithPhases => {
+            // Sélectionner le conteneur guide-container
+            const guideContainer = document.getElementById(`guide-container-${guideId}`);
+
+            // Trouver le guide correspondant dans la liste
+            const guide = guidesWithPhases.find(g => g.id === guideId);
+
+            if (guide) {
+                // Créer un élément div pour le guide
+                const guideElement = document.createElement('div');
+                guideElement.classList.add('guide');
+
+                // Ajouter le nom du boss avec une icône
+                const bossContainer = document.createElement('div');
+                bossContainer.classList.add('boss-container');
+
+                // Créer un élément h2 pour le nom du boss
+                const bossNameElement = document.createElement('h2');
+                bossNameElement.textContent = guide.nom_du_boss;
+
+                // Créer un élément img pour l'icône du boss
+                const bossIconElement = document.createElement('img');
+                bossIconElement.src = 'src/img/FFXIV official icons/boss_icon.png';
+                bossIconElement.alt = 'Boss Icon';
+
+                // Ajouter les éléments au bossContainer
+                bossContainer.appendChild(bossIconElement);
+                bossContainer.appendChild(bossNameElement);
+
+                // Ajouter le bossContainer au guideElement
+                guideElement.appendChild(bossContainer);
+
+
+                // Ajouter les phases
+                guide.phases.forEach(phase => {
+                    // Créer un élément h3 pour le nom de la phase
+                    const phaseNameElement = document.createElement('h3');
+                    phaseNameElement.textContent = phase.phase_nom;
+
+                    // Créer un élément p pour le contenu de la phase
+                    const contentElement = document.createElement('p');
+                    contentElement.textContent = phase.content;
+
+                    // Ajouter les éléments au guideElement
+                    guideElement.appendChild(phaseNameElement);
+                    guideElement.appendChild(contentElement);
+
+                    // Ajouter l'image si elle existe
+                    if (phase.image_chemin) {
+                        const imageElement = document.createElement('img');
+                        imageElement.src = phase.image_chemin;
+                        guideElement.appendChild(imageElement);
+                    }
+                }); 
+
+                // Vérifier si le conteneur existe avant d'ajouter le guideElement
+                if (guideContainer) {
+                    // Ajouter le guideElement au conteneur
+                    guideContainer.appendChild(guideElement);
+                } else {
+                    console.error(`Conteneur avec l'ID guide-container-${guideId} non trouvé.`);
+                }
+            } else {
+                console.error(`Guide avec l'ID ${guideId} non trouvé.`);
+            }
+        })
+        .catch(error => {
+            console.error(`Erreur lors de la récupération du guide: ${error}`);
+        });
+}
+
+// Appeler la fonction au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    // Appeler la fonction pour chaque guide que vous souhaitez afficher
+    displayGuide(1);
+    displayGuide(2);
+});
+
+
+
 // Agrandit l'espace d'input selon le placeholder
 const input = document.querySelectorAll('input');
 for(i=0; i<input.length; i++){
     input[i].setAttribute('size',input[i].getAttribute('placeholder').length);
 }
-
-
-
-// BDD //
-
-        // Fonction pour effectuer la requête AJAX
-        async function fetchGuides() {
-            try {
-                const response = await fetch('/api/guides');
-                const data = await response.json();
-
-                // Mettez à jour le contenu de la div avec les données récupérées
-                const contenuGuideDiv = document.querySelector('.contenu-guide');
-                contenuGuideDiv.innerHTML = '';
-
-                data.forEach(guide => {
-                    const guideContent = document.createElement('p');
-                    guideContent.textContent = guide.contenu;
-                    contenuGuideDiv.appendChild(guideContent);
-                });
-            } catch (error) {
-                console.error('Erreur lors de la récupération des guides:', error);
-            }
-        }
-
-        // Appelez la fonction au chargement de la page ou à un moment approprié
-        window.onload = fetchGuides;

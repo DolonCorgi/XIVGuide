@@ -68,9 +68,12 @@
     margin-bottom: 0px !important;
 }
 
-.guides .content p {
+.guides .content p,
+.guides .content h2,
+.guides .content h3,
+.guides .content img
+{
     position: relative;
-    margin: 0 !important;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -78,8 +81,11 @@
     transform: scale(0);
     opacity: 0;
     transition: all 0.55s ease;
+}
+
+.guides .content p{
     white-space: pre-line; /* Ajoute un retour à la ligne lorsque nécessaire */
-    font-size: 90%;
+    font-size: 95%;
     font-family: "TrajanPro-Regular";
 }
 
@@ -108,7 +114,10 @@
     max-height: fit-content;
 }
 
-.guides input[type=checkbox]:checked + .title + .content p {
+.guides input[type=checkbox]:checked + .title + .content p,
+.guides input[type=checkbox]:checked + .title + .content h2,
+.guides input[type=checkbox]:checked + .title + .content h3,
+.guides input[type=checkbox]:checked + .title + .content img {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -126,5 +135,22 @@
 
 /* Contenu Guides */
 
-/* Parvis Sadique */
-    
+.guide img {
+    max-width: 100%; /* Pour que l'image s'adapte à la largeur du conteneur */
+    max-height: 400px;
+    height: auto; /* Pour que la hauteur s'ajuste automatiquement */
+}
+
+.guide h3 {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.boss-container {
+    display: flex;
+    align-items: center; /* Aligne les éléments verticalement au centre */
+}
+
+.boss-container img {
+    margin-right: 8px; /* Marge à droite pour l'espace entre l'icône et le texte */
+}
